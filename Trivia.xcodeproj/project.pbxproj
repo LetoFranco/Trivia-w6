@@ -99,13 +99,9 @@
 		AD89215E28C95C3D00AB988A /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
-				AD89215F28C95C3D00AB988A /* AppDelegate.swift */,
-				AD89216128C95C3D00AB988A /* SceneDelegate.swift */,
-				AD89216328C95C3D00AB988A /* ViewController.swift */,
-				AD89216528C95C3D00AB988A /* Main.storyboard */,
-				AD89216828C95C3E00AB988A /* Assets.xcassets */,
-				AD89216A28C95C3E00AB988A /* LaunchScreen.storyboard */,
-				AD89216D28C95C3E00AB988A /* Info.plist */,
+				AD89219328C95CE200AB988A /* Resource */,
+				AD89219128C95CD200AB988A /* Features */,
+				AD89218F28C95CB800AB988A /* UI */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -125,6 +121,58 @@
 				AD89218228C95C3E00AB988A /* TriviaUITestsLaunchTests.swift */,
 			);
 			path = TriviaUITests;
+			sourceTree = "<group>";
+		};
+		AD89218F28C95CB800AB988A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AD89219428C95D6500AB988A /* Storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AD89219028C95CC900AB988A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AD89215F28C95C3D00AB988A /* AppDelegate.swift */,
+				AD89216128C95C3D00AB988A /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AD89219128C95CD200AB988A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AD89219028C95CC900AB988A /* App */,
+				AD89219228C95CD700AB988A /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AD89219228C95CD700AB988A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AD89216328C95C3D00AB988A /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AD89219328C95CE200AB988A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AD89216828C95C3E00AB988A /* Assets.xcassets */,
+				AD89216D28C95C3E00AB988A /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		AD89219428C95D6500AB988A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AD89216A28C95C3E00AB988A /* LaunchScreen.storyboard */,
+				AD89216528C95C3D00AB988A /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,7 +487,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22KT8D9U4G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Trivia/Info.plist;
+				INFOPLIST_FILE = Trivia/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +515,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22KT8D9U4G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Trivia/Info.plist;
+				INFOPLIST_FILE = Trivia/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
