@@ -24,8 +24,14 @@ class InitialViewController: UIViewController {
   // MARK: - Actions
   
   @IBAction func startTriviaTapped(_ sender: Any) {
-    let name = userTextField.text!
-    print("Botón Empezar tocado. El nombre del usuario es: \(name)")
+    guard userTextField.hasText else {
+      print("Por favor ingrese un nombre de usuario primero.")
+      
+      return
+    }
+    
+    let vc = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
+    present(vc, animated: true)
   }
   
   private func addLogoConstraint() {

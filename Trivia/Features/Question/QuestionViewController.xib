@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="questionLabel" destination="kyS-BO-Mn3" id="Low-pQ-6GK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RANDOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyK-WF-Hor">
+                    <rect key="frame" x="20" y="68" width="374" height="38.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si el dolor se va, la inflamacion vuelve?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyS-BO-Mn3">
+                    <rect key="frame" x="20" y="417" width="374" height="72"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="xUO-d7-uSc">
+                    <rect key="frame" x="24" y="656" width="366" height="182"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe7-U8-CgE">
+                            <rect key="frame" x="0.0" y="0.0" width="159" height="182"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="120" scale="large" weight="medium"/>
+                                <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="rightAnswerTapped:" destination="-1" eventType="touchUpInside" id="IbG-0N-JIB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjK-Nt-wjh">
+                            <rect key="frame" x="207" y="0.0" width="159" height="182"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="120" scale="large" weight="medium"/>
+                                <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="wrongAnswerTapped:" destination="-1" eventType="touchUpInside" id="qbL-Vt-K7I"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xUO-d7-uSc" secondAttribute="trailing" constant="24" id="1AI-Oc-STW"/>
+                <constraint firstItem="JyK-WF-Hor" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2PI-dC-jSd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JyK-WF-Hor" secondAttribute="trailing" constant="20" id="ANU-O5-ctF"/>
+                <constraint firstItem="xUO-d7-uSc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="JWi-VA-d10"/>
+                <constraint firstItem="JyK-WF-Hor" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="Rjr-59-r6X"/>
+                <constraint firstItem="kyS-BO-Mn3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="T87-Cw-Oex"/>
+                <constraint firstItem="xUO-d7-uSc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kyS-BO-Mn3" secondAttribute="bottom" constant="24" id="an6-HQ-InY"/>
+                <constraint firstItem="kyS-BO-Mn3" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="fDP-i5-TjR"/>
+                <constraint firstItem="kyS-BO-Mn3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="x1i-KF-41g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xUO-d7-uSc" secondAttribute="bottom" constant="24" id="z30-rS-RJM"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="76"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
