@@ -17,45 +17,57 @@ class QuestionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    setCurrentQuestion(for: 0)
+    startGame()
   }
   
   @IBAction func rightAnswerTapped(_ sender: UIButton) {
-    let result = validateCurrentQuestion(with: true)
-    sendResult(result)
+    didSelect(rightAnswer: true)
   }
   
   @IBAction func wrongAnswerTapped(_ sender: UIButton) {
-    let result = validateCurrentQuestion(with: false)
-    sendResult(result)
+    didSelect(rightAnswer: false)
   }
   
   // MARK: - Private Functions
   
-  private func updateQuestion() {
-    currentQuestionIndex += 1
-    setCurrentQuestion(for: currentQuestionIndex)
+  private func startGame() {
+    guard !questions.isEmpty else { return }
+    
+    let initialIndex = 0
+    loadQuestion(for: initialIndex)
   }
   
-  private func setCurrentQuestion(for index: Int) {
-    if index < questions.count {
-      questionLabel.text = questions[index].question
-    } else {
-      currentQuestionIndex = 0
-      questionLabel.text = questions[currentQuestionIndex].question
-    }
+  private func restartGame() {
+    startGame()
+  }
+  
+  private func loadQuestion(for index: Int) {
+    guard index < questions.count else { return restartGame() }
+    
+    questionLabel.text = questions[index].question
+  }
+  
+  private func didSelect(rightAnswer value: Bool) {
+    let result = validateCurrentQuestion(with: value)
+    sendMessage(with: result)
   }
   
   private func validateCurrentQuestion(with answer: Bool) -> Bool {
     questions[currentQuestionIndex].answer == answer
   }
   
-  private func sendResult(_ result: Bool) {
-    if result {
-      print("El usuario ha respondido correctamente.")
-    } else {
-      print("El usuario ha respondido incorrectamente.")
+  private func sendMessage(with result: Bool) {
+    let message = result ? "La respuesta es correcta! 🥳" : "La respuesta es incorrecta 😔"
+    let alert = UIAlertController(title: "Respuesta", message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+      self.updateQuestion()
     }
-    updateQuestion()
+    alert.addAction(okAction)
+    present(alert, animated: true)
+  }
+  
+  private func updateQuestion() {
+    currentQuestionIndex += 1
+    loadQuestion(for: currentQuestionIndex)
   }
 }
