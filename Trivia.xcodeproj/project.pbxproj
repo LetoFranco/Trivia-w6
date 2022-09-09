@@ -20,6 +20,8 @@
 		AD89219D28C9839F00AB988A /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD89219B28C9839F00AB988A /* QuestionViewController.xib */; };
 		AD8921A028C9869C00AB988A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD89219F28C9869C00AB988A /* Question.swift */; };
 		AD8921A328C986CC00AB988A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8921A228C986CC00AB988A /* Game.swift */; };
+		ADB449C028CACA79008E47D7 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB449BE28CACA79008E47D7 /* InformationViewController.swift */; };
+		ADB449C128CACA79008E47D7 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB449BF28CACA79008E47D7 /* InformationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		AD89219B28C9839F00AB988A /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 		AD89219F28C9869C00AB988A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		AD8921A228C986CC00AB988A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		ADB449BE28CACA79008E47D7 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		ADB449BF28CACA79008E47D7 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		AD89219128C95CD200AB988A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				ADB449BD28CACA4E008E47D7 /* Information */,
 				AD89219028C95CC900AB988A /* App */,
 				AD89219228C95CD700AB988A /* StartGame */,
 				AD89219928C9838F00AB988A /* Question */,
@@ -209,6 +214,15 @@
 				AD8921A228C986CC00AB988A /* Game.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		ADB449BD28CACA4E008E47D7 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				ADB449BE28CACA79008E47D7 /* InformationViewController.swift */,
+				ADB449BF28CACA79008E47D7 /* InformationViewController.xib */,
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD89216C28C95C3E00AB988A /* LaunchScreen.storyboard in Resources */,
+				ADB449C128CACA79008E47D7 /* InformationViewController.xib in Resources */,
 				AD89216928C95C3E00AB988A /* Assets.xcassets in Resources */,
 				AD89219D28C9839F00AB988A /* QuestionViewController.xib in Resources */,
 				AD89219828C96B1B00AB988A /* InitialViewController.xib in Resources */,
@@ -345,6 +360,7 @@
 			files = (
 				AD8921A028C9869C00AB988A /* Question.swift in Sources */,
 				AD8921A328C986CC00AB988A /* Game.swift in Sources */,
+				ADB449C028CACA79008E47D7 /* InformationViewController.swift in Sources */,
 				AD89216028C95C3D00AB988A /* AppDelegate.swift in Sources */,
 				AD89216228C95C3D00AB988A /* SceneDelegate.swift in Sources */,
 				AD89219C28C9839F00AB988A /* QuestionViewController.swift in Sources */,

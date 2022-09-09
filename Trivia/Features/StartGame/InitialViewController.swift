@@ -23,6 +23,14 @@ class InitialViewController: UIViewController {
   
   // MARK: - Actions
   
+  
+  @IBAction func moreInformationBeenTapped(_ sender: Any) {
+    let controller = InformationViewController()
+    controller.modalPresentationStyle = .overFullScreen
+    
+    present(controller, animated: true)
+  }
+  
   @IBAction func startTriviaTapped(_ sender: Any) {
     guard userTextField.hasText else {
       print("Por favor ingrese un nombre de usuario primero.")

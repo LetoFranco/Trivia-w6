@@ -54,21 +54,36 @@
                     <rect key="frame" x="139" y="43" width="150" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdU-M3-izt">
+                    <rect key="frame" x="151" y="798" width="112" height="48"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Information">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="moreInformationBeenTapped:" destination="-1" eventType="touchUpInside" id="OJ4-6Q-2nw"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="X4g-5b-ahK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1n8-Vn-etj"/>
+                <constraint firstItem="wdU-M3-izt" firstAttribute="top" secondItem="X4g-5b-ahK" secondAttribute="bottom" constant="16" id="5hW-it-0GH"/>
+                <constraint firstItem="wdU-M3-izt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BnV-hg-Dsp"/>
                 <constraint firstItem="Tcc-1X-ii0" firstAttribute="leading" secondItem="bfj-na-hnq" secondAttribute="leading" id="LAm-mY-b4W"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1UM-ZF-tzJ" secondAttribute="trailing" constant="20" id="NZa-Cl-RIY"/>
                 <constraint firstItem="Tcc-1X-ii0" firstAttribute="top" secondItem="bfj-na-hnq" secondAttribute="bottom" constant="8" symbolic="YES" id="PPf-48-bWR"/>
                 <constraint firstItem="1UM-ZF-tzJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QTt-pG-zkh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wdU-M3-izt" secondAttribute="bottom" constant="16" id="Sw8-LR-f8v"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bfj-na-hnq" secondAttribute="trailing" constant="20" id="UIb-yw-zhq"/>
                 <constraint firstItem="bfj-na-hnq" firstAttribute="top" secondItem="1UM-ZF-tzJ" secondAttribute="bottom" constant="24" id="Wtm-GG-0Q1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tcc-1X-ii0" secondAttribute="trailing" constant="20" id="bO3-lp-akA"/>
                 <constraint firstItem="bfj-na-hnq" firstAttribute="leading" secondItem="1UM-ZF-tzJ" secondAttribute="leading" id="caB-mF-PfZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X4g-5b-ahK" secondAttribute="trailing" constant="20" id="lAB-rk-tBc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="X4g-5b-ahK" secondAttribute="bottom" constant="80" id="vox-8Y-idQ"/>
+                <constraint firstItem="wdU-M3-izt" firstAttribute="centerX" secondItem="X4g-5b-ahK" secondAttribute="centerX" id="wLV-v9-tID"/>
                 <constraint firstItem="1UM-ZF-tzJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="zsb-8s-zbe"/>
             </constraints>
             <point key="canvasLocation" x="139" y="76"/>
@@ -76,6 +91,9 @@
     </objects>
     <resources>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
