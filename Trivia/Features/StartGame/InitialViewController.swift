@@ -50,7 +50,14 @@ class InitialViewController: UIViewController {
     questionController.title = questionTitle
     questionController.tabBarItem = UITabBarItem(title: questionTitle, image: questionImage, selectedImage: questionImage)
     
-    tabBarController.setViewControllers([questionController], animated: true)
+    let categoriesController = CategoriesViewController()
+    let categoriesTitle = "Categories"
+    let categoriesImage = UIImage(systemName: "list.dash")
+    let categoriesNavController = UINavigationController(rootViewController: categoriesController)
+    categoriesController.title = categoriesTitle
+    categoriesNavController.tabBarItem = UITabBarItem(title: categoriesTitle, image: categoriesImage, selectedImage: categoriesImage)
+    
+    tabBarController.setViewControllers([questionController, categoriesNavController], animated: true)
     let navigationController = UINavigationController(rootViewController: tabBarController)
     navigationController.modalPresentationStyle = .overFullScreen
     tabBarController.navigationBar(isHidden: true)

@@ -22,6 +22,9 @@
 		AD8921A328C986CC00AB988A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8921A228C986CC00AB988A /* Game.swift */; };
 		ADB449C028CACA79008E47D7 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB449BE28CACA79008E47D7 /* InformationViewController.swift */; };
 		ADB449C128CACA79008E47D7 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB449BF28CACA79008E47D7 /* InformationViewController.xib */; };
+		ADB449C528CAD11A008E47D7 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB449C328CAD11A008E47D7 /* CategoriesViewController.swift */; };
+		ADB449C628CAD11A008E47D7 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB449C428CAD11A008E47D7 /* CategoriesViewController.xib */; };
+		ADB449C828CAD1E4008E47D7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB449C728CAD1E4008E47D7 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		AD8921A228C986CC00AB988A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		ADB449BE28CACA79008E47D7 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		ADB449BF28CACA79008E47D7 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
+		ADB449C328CAD11A008E47D7 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		ADB449C428CAD11A008E47D7 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		ADB449C728CAD1E4008E47D7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 		AD89219128C95CD200AB988A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				ADB449C228CAD101008E47D7 /* Categories */,
 				ADB449BD28CACA4E008E47D7 /* Information */,
 				AD89219028C95CC900AB988A /* App */,
 				AD89219228C95CD700AB988A /* StartGame */,
@@ -204,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				AD89219F28C9869C00AB988A /* Question.swift */,
+				ADB449C728CAD1E4008E47D7 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +231,15 @@
 				ADB449BF28CACA79008E47D7 /* InformationViewController.xib */,
 			);
 			path = Information;
+			sourceTree = "<group>";
+		};
+		ADB449C228CAD101008E47D7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ADB449C328CAD11A008E47D7 /* CategoriesViewController.swift */,
+				ADB449C428CAD11A008E47D7 /* CategoriesViewController.xib */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +348,7 @@
 			files = (
 				AD89216C28C95C3E00AB988A /* LaunchScreen.storyboard in Resources */,
 				ADB449C128CACA79008E47D7 /* InformationViewController.xib in Resources */,
+				ADB449C628CAD11A008E47D7 /* CategoriesViewController.xib in Resources */,
 				AD89216928C95C3E00AB988A /* Assets.xcassets in Resources */,
 				AD89219D28C9839F00AB988A /* QuestionViewController.xib in Resources */,
 				AD89219828C96B1B00AB988A /* InitialViewController.xib in Resources */,
@@ -363,7 +381,9 @@
 				ADB449C028CACA79008E47D7 /* InformationViewController.swift in Sources */,
 				AD89216028C95C3D00AB988A /* AppDelegate.swift in Sources */,
 				AD89216228C95C3D00AB988A /* SceneDelegate.swift in Sources */,
+				ADB449C828CAD1E4008E47D7 /* Category.swift in Sources */,
 				AD89219C28C9839F00AB988A /* QuestionViewController.swift in Sources */,
+				ADB449C528CAD11A008E47D7 /* CategoriesViewController.swift in Sources */,
 				AD89219728C96B1B00AB988A /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
