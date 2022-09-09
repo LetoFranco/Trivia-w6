@@ -11,6 +11,7 @@ class QuestionViewController: UIViewController {
   
   @IBOutlet weak var questionLabel: UILabel!
   
+  var categoryId = 0
   private let questions = Game.shared.fetchQuestions()
   private var currentQuestionIndex = 0
   

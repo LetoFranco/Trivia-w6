@@ -5,6 +5,7 @@
 //  Created by Franco Leto on 08/09/2022.
 //
 
+import Alamofire
 import UIKit
 
 class CategoriesViewController: UIViewController {
@@ -35,8 +36,29 @@ class CategoriesViewController: UIViewController {
   // MARK: - Private Functions
   
   private func fetchCategories() {
-    categories = [Category(id: 1, name: "Primera"), Category(id: 2, name: "Segunda")]
-    reloadCategories()
+    let request = AF.request("https://opentdb.com/api_category.php")
+    request.response { [weak self] response in
+      guard let self = self else { return }
+      
+      switch response.result {
+      case .success(let data):
+        do {
+          guard let data = data else { return }
+          let trivia = try JSONDecoder().decode(Trivia.self, from: data)
+          
+          self.categories = trivia.categories
+          self.reloadCategories()
+        } catch {
+          self.showError(message: error.localizedDescription)
+        }
+      case .failure(let error):
+        self.showError(message: error.localizedDescription)
+      }
+    }
+  }
+  
+  private func showError(message: String) {
+    print("Ha ocurrido un error: ", message)
   }
   
   private func reloadCategories() {
@@ -58,6 +80,17 @@ class CategoriesViewController: UIViewController {
 
 // MARK: - Extensions
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    
+    let category = categories[indexPath.row]
+    let controller = QuestionViewController()
+    controller.categoryId = category.id
+    controller.title = category.name
+    
+    navigationController?.pushViewController(controller, animated: true)
+  }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     categories.count
