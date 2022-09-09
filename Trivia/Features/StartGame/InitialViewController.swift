@@ -30,8 +30,24 @@ class InitialViewController: UIViewController {
       return
     }
     
-    let vc = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
-    present(vc, animated: true)
+    showHomeController()
+  }
+  
+  private func showHomeController() {
+    let tabBarController = UITabBarController()
+    
+    let questionController = QuestionViewController()
+    let questionTitle = "RANDOM"
+    let questionImage = UIImage(systemName: "shuffle")
+    questionController.title = questionTitle
+    questionController.tabBarItem = UITabBarItem(title: questionTitle, image: questionImage, selectedImage: questionImage)
+    
+    tabBarController.setViewControllers([questionController], animated: true)
+    let navigationController = UINavigationController(rootViewController: tabBarController)
+    navigationController.modalPresentationStyle = .overFullScreen
+    tabBarController.navigationBar(isHidden: true)
+    
+    present(navigationController, animated: true)
   }
   
   private func addLogoConstraint() {
@@ -41,5 +57,12 @@ class InitialViewController: UIViewController {
     logoImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     let centerHorizontalConstraint = logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
     NSLayoutConstraint.activate([centerHorizontalConstraint])
+  }
+}
+
+
+extension UIViewController {
+  func navigationBar(isHidden: Bool, animated: Bool = true) {
+    navigationController?.setNavigationBarHidden(isHidden, animated: true)
   }
 }
